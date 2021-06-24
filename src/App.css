@@ -53,3 +53,39 @@
     transform: rotate(360deg);
   }
 }
+
+.NumberTable {
+  display: flex;
+  margin: 0;
+}
+
+.NumberTable > li {
+  display: flex;
+  list-style-type: none;
+  height: 50px;
+  width: 50px;
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.right {
+  margin-top: 10px;
+  margin-left: 25px;
+  text-align: left;
+}
+
+.right h2 {
+  margin: 0;
+}
+
+.clickable img {
+  width: 280px;
+  height: 220px;
+}
+
+/* .box__img {
+  margin-top: 10px;
+  margin-left: 25px;
+  text-align: left;
+} */

@@ -1,38 +1,39 @@
-// function CreditCard(props){
+import React from 'react';
+import BoxColor from './BoxColor';
+import mastercard from './imgs/master-card.svg';
+import visa from './imgs/visa.png';
+import './CreditCard.css';
 
-//     function numberProtection (){
-//         let a = props.number.split('');
+function CreditCard(props) {
+  return (
+    <div className="card-size m-2">
+      <BoxColor hex={props.bgColor} class="rounded-3">
+        <div className="card-body" style={{ color: props.color }}>
+          <header className="d-flex flex-row-reverse">
+            <img
+              className="img-size mb-1"
+              src={props.type === 'Visa' ? visa : mastercard}
+              alt="Credit-card logo"
+            />
+          </header>
+          <h2>•••• •••• •••• {props.number.substr(-4)}</h2>
+          <div className="row">
+            <div className="text-truncate">
+              <small>
+                Expires: {props.expirationMonth}/{props.expirationYear}
+              </small>
+              <span className="ms-5">
+                <small>{props.bank}</small>
+              </span>
+            </div>
+            <div>
+              <small>{props.owner}</small>
+            </div>
+          </div>
+        </div>
+      </BoxColor>
+    </div>
+  );
+}
 
-//         for (let i = 0; i < a.length; i++) {
-//           if (i <= 11) {
-//             a[i] = '*';
-//           }
-//         }
-
-//         a.join('');
-
-//         return a
-//     }
-
-// return (
-//     <div className="creditcard" uk-grid>
-//         <div>
-//             <div
-//             className="creditcard2"
-//             style= "backgroundColor:"{props.bgColor}>
-//                 <font color= {props.color}>
-//                     <p>'props.type'</p>
-//                     <h3 className="card-title">{numberProtection}</h3>
-//                     <p>{props.expirationMonth}</p>
-//                     <p>{props.expirationYear}</p>
-//                     <p>{props.bank}</p>
-//                     <p>{props.owner}</p>
-//                 </font>
-//             </div>
-//         </div>
-//     </div>
-// );
-
-// }
-
-// export default CreditCard;
+export default CreditCard;

@@ -17,7 +17,7 @@ function IdCard(props) {
           <b>Height:</b> {props.height}
         </p>
         <p>
-          <b>Birth:</b> {props.birth}
+          <b>Birth:</b> {props.birth.toLocaleString()}
         </p>
       </div>
     </div>

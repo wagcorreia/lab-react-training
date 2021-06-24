@@ -1,15 +1,16 @@
 function Random(props) {
-  const min = props.min;
-  const max = props.max;
-  const random = Math.floor(Math.random() * (max - min + 1)) + min;
+  const randomNum = Math.floor(
+    Math.random() * (props.max - props.min - 1) + props.min
+  );
 
   return (
-    <div>
-      <h1>Random</h1>
+    <div className="border border-dark m-2 d-flex p-1">
       <p>
-        `Random value between {min} and {max} = {random}`
+        {' '}
+        Random Value Between {props.min} and {props.max} => {randomNum}
       </p>
     </div>
   );
 }
+
 export default Random;

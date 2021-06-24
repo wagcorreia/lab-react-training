@@ -1,26 +1,15 @@
 function Greetings(props) {
-  //   const obj = {
-  //     de: 'Hallo',
-  //     en: 'Hello',
-  //     es: 'Ola',
-  //     fr: 'Bonjour',
-  //   };
-
-  //   function renderText() {
-  //     let text = '';
-
-  //     for (let key in obj) {
-  //       if (props[key]) {
-  //         text += obj[key] + ' ';
-  //       }
-  //     }
-  //     return text;
-  //   }
+  const greetings = {
+    de: 'Hallo',
+    en: 'Hello',
+    es: 'Ola',
+    fr: 'Bonjour',
+  };
 
   return (
     <div>
-      <p className="greetings" lang={props.lang}>
-        ({props.lang} === "de") ? 'Hallo'{props.children}
+      <p className="greetings">
+        {greetings[props.lang]} {props.children}
       </p>
     </div>
   );
